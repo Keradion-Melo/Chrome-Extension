@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root, #melo-root, [data-theme="dark"] {
+    --melo-bg: #171820;
+    --melo-surface: #1E212B;
+    --melo-surface-hover: #282C38;
+    --melo-border: rgba(255, 255, 255, 0.08);
+    --melo-text-primary: #F4F1F2;
+    --melo-text-secondary: #C5C3C8;
+    --melo-text-subdued: #7E869B;
+    --melo-header-bg: #1D1E28;
+    --melo-slider-bg: #2E3342;
+  }
+
+  [data-theme="light"] {
+    --melo-bg: #F4F4F7;
+    --melo-surface: #FFFFFF;
+    --melo-surface-hover: #ECECEF;
+    --melo-border: rgba(0, 0, 0, 0.08);
+    --melo-text-primary: #18191F;
+    --melo-text-secondary: #4A4D57;
+    --melo-text-subdued: #7A7E8B;
+    --melo-header-bg: #FFFFFF;
+    --melo-slider-bg: #E2E2E8;
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(224, 100, 93, 0.6);
+}
+
+/* Browser input autofill & text color fixes */
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  color-scheme: dark;
+}
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  color-scheme: light;
+}
